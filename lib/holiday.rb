@@ -68,7 +68,7 @@ end
       puts "#{season.to_s.capitalize}:"
       values.each do |holiday,supplies|
         if holiday.to_s.include? ("_")
-          result=holiday.to_s.split("_").map {|e|e.capitalize}.join(" ")
+          result=holiday.to_s.split("_").collect {|e|e.capitalize}.join(" ")
         else
           result =holiday.to_s.capitalize
           end
